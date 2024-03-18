@@ -199,7 +199,6 @@ function formatDate(date) {
  */
 function getCountWeekendsInMonth(month, year) {
   const date = new Date(year, month, 0);
-  console.log((date.getDate() / 5) * 2);
   return Math.ceil((date.getDate() / 7) * 2);
 }
 
@@ -217,8 +216,6 @@ function getCountWeekendsInMonth(month, year) {
  * Date(2024, 1, 23) => 8
  */
 function getWeekNumberByDate(date) {
-  console.log(new Date(date).getMonth() + 1);
-  console.log(Math.ceil(new Date(date).getDate() / 7));
   return (
     Math.ceil(new Date(date).getDate() / 7) * (new Date(date).getMonth() + 1)
   );
